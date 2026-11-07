@@ -1,7 +1,10 @@
+'use client'
+import { BooksContext } from '@/context/BooksProvider';
 import Link from 'next/link';
-import React from 'react';
+import React, { useContext } from 'react';
 
-const Navbar = () => {
+const Navbar = () => { 
+  const {count} = useContext(BooksContext);
   return (
     <div className='bg-base-100 shadow-sm'>
       <div className="navbar container mx-auto ">
@@ -16,6 +19,7 @@ const Navbar = () => {
         <li><Link href='/'>Home</Link></li>
         <li><Link href='/books'>books</Link></li>
         <li><Link href='/listed-books'>listed-books</Link></li>
+              <li>  <Link href={'/demo'}> Demo</Link> </li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -24,11 +28,12 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
       <li><Link href='/'>Home</Link></li>
       <li><Link href='/books'>books</Link></li>
-      <li><Link href='/listed-books'>listed-books</Link></li>
+      <li><Link href='/listed-books'>listed-books</Link></li> 
+       <li>  <Link href={'/demo'}> Demo</Link> </li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">ReadButtons {count}</a>
   </div>
 </div>
     </div>
