@@ -1,3 +1,5 @@
+import ReadBooksButton from "@/components/btnstyle/ReadBooksButton";
+import WishListButton from "@/components/btnstyle/WishListButton";
 import { IBook } from "@/types/IBook";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -80,8 +82,8 @@ const BookViewDetailsPage = async ({ params }: IBookViewDetailsPage) => {
           </div>
 
           <div className="flex gap-3 mt-6">
-            <button className="btn btn-outline">Read</button>
-            <button className="btn btn-info text-white">Wishlist</button>
+           <ReadBooksButton book={book}/>
+            <WishListButton book={book}/>
           </div>
         </div>
       </div>

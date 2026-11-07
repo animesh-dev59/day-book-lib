@@ -15,6 +15,7 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><Link href='/'>Home</Link></li>
         <li><Link href='/books'>books</Link></li>
+        <li><Link href='/listed-books'>listed-books</Link></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -23,6 +24,7 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
       <li><Link href='/'>Home</Link></li>
       <li><Link href='/books'>books</Link></li>
+      <li><Link href='/listed-books'>listed-books</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
