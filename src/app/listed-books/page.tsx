@@ -113,8 +113,11 @@ const ListTedPages = () => {
 
   const [sortBy, setSortBy] = useState<SortType>("rating");
   const [activeTab, setActiveTab] = useState<TabType>("read");
+  // read wishlist wishlist wishlist wishlsit wishlist wishlist read read read read read read  wishlist wishlist wishlist readf reaa read read read read read read read read read 
 //  const [activeTab,setActiveTab] = useState<'read' | 'wishlist' >('read');
-  // Sorting
+  // Sorting 
+  //   checked={activeTab === "read"}
+      //        onChange={() => setActiveTab("read")}
   const sortBooks = (booksData: IBook[]) => {
     const sortedBooks = [...booksData];
     if (sortBy === "rating") {
@@ -128,8 +131,15 @@ const ListTedPages = () => {
   };
 
   const sortedReadBooks = sortBooks(readBooks);
-  const sortedWishListBooks = sortBooks(wishList);
-
+  const sortedWishListBooks = sortBooks(wishList); 
+  // "read" | "wishlist";
+  //const [activeTab, setActiveTab] = useState<TabType>("read");
+  //   checked={activeTab === "read"}
+    // checked={activeTab === 'read'};
+     // onChange={()=>setActiveTab('read')}
+      //  onChange={()=>setActiveTab("read")}
+      //  onChange={()=>setActiveTab('read')}
+   //  onChange={() => setActiveTab("read")}
   // Summary (খোলা tab অনুযায়ী)
   const activeBooks = activeTab === "read" ? readBooks : wishList; 
   // const activeBooks = activeTab === 'read ? read
