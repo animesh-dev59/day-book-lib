@@ -236,7 +236,7 @@ const ListTedPages = () => {
         </div>
 
         {/* Right: Sorting (30%) */}
-        <div className="md:col-span-3 md:mt-2">
+        <div className="md:col-span-3 md:mt-2 ">
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortType)}

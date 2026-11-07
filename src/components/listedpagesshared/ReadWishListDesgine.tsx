@@ -4,11 +4,11 @@ import { FiMapPin, FiUsers, FiFileText, FiTrash2 } from "react-icons/fi";
 // import React, { useContext } from "react";
 import Link from "next/link";
 import { IBook } from '@/types/IBook';
-// interface IProps {
-//   book: IBook;
-//   onDelete:(bookId: number) => void;
-// }
-const ReadWishListDesgine = ({book}:{book:IBook}) => {
+interface IProps {
+  book: IBook;
+  onDelete:(bookId:number) => void;
+}
+const ReadWishListDesgine = ({book,onDelete}:IProps) => {
   return (
     <div className='gap-3'>
          <div className="flex flex-col my-3 sm:flex-row gap-5 border border-base-300 rounded-2xl bg-base-100 p-4 sm:p-5">

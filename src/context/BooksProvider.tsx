@@ -77,12 +77,12 @@ const BooksProvider = ({ children }: { children: ReactNode }) => {
   const [wishList, setWishList] = useState<IBook[]>([]);
   const [count, setCount] = useState<number>(0);
 
-  const removeFromRead = (bookId: number) => {
+ const removeFromRead = (bookId: number) => {
     setReadBooks((prev) => prev.filter((book) => book.bookId !== bookId));
     setCount((prev) => (prev > 0 ? prev - 1 : 0));
   };
 
-  const removeFromWishList = (bookId: number) => {
+ const removeFromWishList = (bookId: number) => {
     setWishList((prev) => prev.filter((book) => book.bookId !== bookId));
   };
 
